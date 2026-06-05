@@ -1,0 +1,144 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Plan {
+  id        String      @id @default(cuid())
+  name      String
+  type      String
+  price     Float
+  duration  String
+  features  String[]
+  images    PlanImage[]
+  isActive  Boolean     @default(true)
+  popular   Boolean     @default(false)
+  createdAt DateTime    @default(now())
+  orders    Order[]
+}
+
+model PlanImage {
+  id        String   @id @default(cuid())
+  planId    String
+  plan      Plan     @relation(fields: [planId], references: [id], onDelete: Cascade)
+  url       String
+  r2Key     String
+  alt       String?
+  position  Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model Product {
+  id          String         @id @default(cuid())
+  name        String
+  description String
+  price       Float
+  pdfUrl      String
+  pdfR2Key    String?
+  images      ProductImage[]
+  isActive    Boolean        @default(true)
+  createdAt   DateTime       @default(now())
+  orders      Order[]
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  r2Key     String
+  alt       String?
+  position  Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id        String    @id @default(cuid())
+  name      String
+  email     String    @unique
+  phone     String?
+  password  String?
+  addresses Address[]
+  orders    Order[]
+  createdAt DateTime  @default(now())
+}
+
+model Address {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullName     String
+  phone        String
+  line1        String
+  line2        String?
+  city         String
+  state        String
+  pincode      String
+  country      String   @default("India")
+  isDefault    Boolean  @default(false)
+  orders       Order[]
+  createdAt    DateTime @default(now())
+}
+
+model Order {
+  id              String    @id @default(cuid())
+  userId          String?
+  user            User?     @relation(fields: [userId], references: [id])
+  addressId       String?
+  address         Address?  @relation(fields: [addressId], references: [id])
+  buyerName       String
+  buyerEmail      String
+  buyerPhone      String
+  amount          Float
+  status          String    @default("pending")
+  razorpayOrderId String?
+  razorpayPayId   String?
+  planId          String?
+  plan            Plan?     @relation(fields: [planId], references: [id])
+  productId       String?
+  product         Product?  @relation(fields: [productId], references: [id])
+  downloadToken   String?   @unique
+  downloadedAt    DateTime?
+  createdAt       DateTime  @default(now())
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  url       String
+  r2Key     String
+  title     String?
+  category  String
+  createdAt DateTime @default(now())
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+}
+
+model AppSettings {
+  id                  String   @id @default("singleton")
+  razorpayEnabled     Boolean  @default(false)
+  razorpayMode        String   @default("test")
+  razorpayKeyIdTest   String?
+  razorpaySecretTest  String?
+  razorpayKeyIdLive   String?
+  razorpaySecretLive  String?
+  updatedAt           DateTime @updatedAt
+}

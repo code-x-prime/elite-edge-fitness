@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elite Edge Fitness
 
-## Getting Started
+Full-stack fitness website for Elite Edge Fitness by Coach Gineel N.
 
-First, run the development server:
+## Stack
+
+- Next.js 14 App Router + TypeScript
+- Tailwind CSS (white/gold aggressive theme)
+- Prisma ORM + PostgreSQL
+- NextAuth.js (admin auth — credentials)
+- Razorpay (India-first payments)
+- Resend (transactional email)
+
+## Quick Start
 
 ```bash
+# 1. Copy and fill env
+cp .env.example .env
+
+# 2. Install (already done)
+npm install
+
+# 3. DB migration + seed
+npx prisma migrate dev --name init
+npx prisma db seed
+
+# 4. Dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | Description |
+|-------|-------------|
+| `/` | Home — hero, stats, coach teaser, programs, services, testimonials, blog |
+| `/about` | Coach Gineel N full profile |
+| `/gallery` | Masonry grid, category filter, lightbox |
+| `/plans` | Training plans + Razorpay checkout modal |
+| `/payments` | Manual payment methods (GPay, UPI, PayPal, HSBC) |
+| `/contact` | Contact form + address/hours |
+| `/download?token=` | eBook secure download |
+| `/admin` | Dashboard (protected) |
+| `/admin/login` | Admin sign-in |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Admin Credentials (after seed)
 
-## Learn More
+```
+Email:    admin@eliteedgefitness.in
+Password: admin123
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Payment Flow (Razorpay)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Plans page → select plan → checkout modal (name, email, phone)
+2. `POST /api/payment/create-order` creates Razorpay order + pending DB order
+3. Razorpay widget opens
+4. On success → `POST /api/payment/verify` validates HMAC signature → marks paid
+5. eBook orders: download token generated → email sent with link
+6. Redirect to `/download?token=xxx`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design System
 
-## Deploy on Vercel
+| Token | Value |
+|-------|-------|
+| Heading font | Bebas Neue (all-caps, aggressive) |
+| Body font | Inter |
+| Primary accent | Gold `#F5A623 → #FFD700` |
+| Secondary | Orange `#FF6B00` |
+| BG | White `#FFFFFF` / Light gray `#F7F7F7` |
+| Text | Black `#0A0A0A` |
+| Footer | Dark `#111111` |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ENV Variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `.env.example`. Required for full functionality:
+
+- `DATABASE_URL` — PostgreSQL connection string
+- `NEXTAUTH_SECRET` — any random string (32+ chars)
+- `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` — from Razorpay dashboard
+- `NEXT_PUBLIC_RAZORPAY_KEY_ID` — same as KEY_ID (public)
+- `RESEND_API_KEY` — for email confirmations
+- `EMAIL_TO` — where contact form submissions go
+
+## Deploy
+
+```bash
+npx prisma migrate deploy
+npm run build
+npm start
+```
