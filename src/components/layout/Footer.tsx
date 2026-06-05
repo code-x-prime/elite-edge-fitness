@@ -137,7 +137,17 @@ export default function Footer() {
       <div className="border-t border-[#1F1F1F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-[#555] font-body">© 2026 Elite Edge Fitness. All rights reserved.</p>
-          <p className="text-xs text-[#555] font-body">Made with ♥ for Fitness</p>
+          <p className="text-xs text-[#555] font-body">
+            Designed &amp; Developed by{" "}
+            <a
+              href="https://groxmedia.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF6B00] hover:text-white transition-colors font-bold"
+            >
+              Grox Media
+            </a>
+          </p>
         </div>
       </div>
     </footer>
