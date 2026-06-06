@@ -1,6 +1,8 @@
 import { prisma } from "@/lib/prisma";
 import PlansClient from "./PlansClient";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Training Plans — Elite Edge Fitness",
 };
@@ -13,10 +15,10 @@ async function getPlans() {
     });
   } catch {
     return [
-      { id: "1", name: "Online Training",   type: "online",   price: 2999,  duration: "1 Month",  features: ["Custom online workout plan", "Video demonstrations", "Weekly check-ins", "WhatsApp support", "Diet chart"], isActive: true, popular: false, createdAt: new Date() },
-      { id: "2", name: "Group Training",    type: "group",    price: 3499,  duration: "1 Month",  features: ["Group sessions (up to 10)", "Structured workout plan", "Diet guidance", "Progress tracking", "WhatsApp support"], isActive: true, popular: false, createdAt: new Date() },
-      { id: "3", name: "Personal Training", type: "personal", price: 5999,  duration: "1 Month",  features: ["1-on-1 sessions", "Custom workout program", "Custom nutrition plan", "Daily check-ins", "Priority support", "Body composition analysis"], isActive: true, popular: true, createdAt: new Date() },
-      { id: "4", name: "Elite Package",     type: "elite",    price: 19000, duration: "6 Months", features: ["Everything in Personal Training", "6-month program", "Unlimited sessions", "Supplement guidance", "Contest prep", "Lifetime support"], isActive: true, popular: false, createdAt: new Date() },
+      { id: "1", name: "Online Training", type: "online", price: 2999, duration: "1 Month", features: ["Custom online workout plan", "Video demonstrations", "Weekly check-ins", "WhatsApp support", "Diet chart"], isActive: true, popular: false, createdAt: new Date() },
+      { id: "2", name: "Group Training", type: "group", price: 3499, duration: "1 Month", features: ["Group sessions (up to 10)", "Structured workout plan", "Diet guidance", "Progress tracking", "WhatsApp support"], isActive: true, popular: false, createdAt: new Date() },
+      { id: "3", name: "Personal Training", type: "personal", price: 5999, duration: "1 Month", features: ["1-on-1 sessions", "Custom workout program", "Custom nutrition plan", "Daily check-ins", "Priority support", "Body composition analysis"], isActive: true, popular: true, createdAt: new Date() },
+      { id: "4", name: "Elite Package", type: "elite", price: 19000, duration: "6 Months", features: ["Everything in Personal Training", "6-month program", "Unlimited sessions", "Supplement guidance", "Contest prep", "Lifetime support"], isActive: true, popular: false, createdAt: new Date() },
     ];
   }
 }

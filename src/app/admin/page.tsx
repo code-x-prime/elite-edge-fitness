@@ -10,6 +10,8 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 
+export const dynamic = 'force-dynamic';
+
 async function getStats() {
   try {
     const [orders, plans, contacts, users, gallery] = await Promise.all([
