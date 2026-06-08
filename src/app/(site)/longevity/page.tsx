@@ -51,7 +51,7 @@ export default function LongevityPage() {
           if (found) setDbPlan(found);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   const activePlan = dbPlan || {
@@ -71,11 +71,11 @@ export default function LongevityPage() {
 
   return (
     <div className="bg-[#0A0A0A] text-white min-h-screen pt-20">
-      
+
       {/* ── HERO SECTION ── */}
       <section className="relative overflow-hidden py-20 md:py-28 border-b border-white/5">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0d0300] to-[#150400]" />
-        
+
         {/* Glow */}
         <div
           className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none opacity-20"
@@ -117,18 +117,16 @@ export default function LongevityPage() {
               </Link>
             </div>
           </div>
-          
-          <div className="w-full lg:w-1/2 flex items-center justify-center relative min-h-[350px]">
-            {/* Glow backing */}
-            <div
-              className="absolute w-[260px] h-[260px] bg-[#FF6B00]/15 rounded-full pointer-events-none filter blur-[50px] z-0"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/training-plan-illus.png"
-              alt="Coach Gineel Fitness Plan"
-              className="relative z-10 w-full h-auto max-h-[440px] object-contain drop-shadow-[0_16px_32px_rgba(255,107,0,0.25)] mx-auto block"
-            />
+
+          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
+            <div className="border border-white/10 p-2 bg-[#111111]/80 backdrop-blur-sm rounded-lg shadow-2xl overflow-hidden aspect-[3/4] max-h-[550px] w-full max-w-[412px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/split-flag.jpg"
+                alt="Coach Gineel split under flag"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -216,10 +214,10 @@ export default function LongevityPage() {
             <div className="absolute top-0 right-0 bg-[#FF6B00] text-white text-[10px] font-body font-black uppercase tracking-widest px-4 py-1">
               Premium Program
             </div>
-            
+
             <p className="text-[#FF6B00] text-xs font-body font-bold uppercase tracking-wider mb-2">Coaching Package</p>
             <h3 className="font-heading text-3xl uppercase text-white mb-4">{activePlan.name}</h3>
-            
+
             <div className="flex items-baseline gap-2 mb-6">
               <span className="font-heading text-5xl text-[#FF6B00]">₹{activePlan.price.toLocaleString("en-IN")}</span>
               <span className="text-white/40 text-sm font-body">/ {activePlan.duration}</span>

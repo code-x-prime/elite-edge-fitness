@@ -45,7 +45,7 @@ const METHODS = [
     steps: ["Open PhonePe / Paytm / BHIM", "Go to Send Money → UPI ID", "Enter ngineel@upi", "Enter amount → Pay"],
     link: null,
     linkLabel: null,
-    qrCode: "/upi-qr.png",
+    qrCode: "/upi.jpeg",
   },
   {
     id: "paypal",
@@ -160,10 +160,14 @@ export default function PaymentsPage() {
 
                     {/* QR Code display */}
                     {"qrCode" in m && m.qrCode && (
-                      <div className="flex flex-col items-center justify-center p-4 bg-[#F8F8F8] border border-[#E8E8E8] rounded-md">
+                      <div className="flex flex-col items-center justify-center p-6 bg-[#F8F8F8] border border-[#E8E8E8] rounded-md">
                         <p className="text-[10px] font-body font-bold uppercase tracking-widest text-[#666] mb-3">Scan to Pay via UPI</p>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={m.qrCode} alt="UPI QR Code" className="w-44 h-44 object-contain shadow-sm border border-[#E8E8E8] bg-white p-2 rounded" />
+                        <img 
+                          src={m.qrCode} 
+                          alt="UPI QR Code" 
+                          className="w-full max-w-[280px] h-auto shadow-md border border-[#E8E8E8] bg-white p-3 rounded hover:scale-[1.02] transition-transform duration-300" 
+                        />
                       </div>
                     )}
 
