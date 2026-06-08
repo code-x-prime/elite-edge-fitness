@@ -153,7 +153,7 @@ export default function AdminPlansPage() {
                 <div>
                   <label className={lbl}>Type</label>
                   <select value={modal.plan.type ?? "personal"} onChange={e => setModal(m=>({...m,plan:{...m.plan,type:e.target.value}}))} className={inp}>
-                    {["personal","group","online","elite"].map(t=><option key={t} value={t}>{t}</option>)}
+                    {["personal","group","online","elite","longevity"].map(t=><option key={t} value={t}>{t}</option>)}
                   </select>
                 </div>
               </div>

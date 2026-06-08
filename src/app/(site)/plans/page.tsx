@@ -10,7 +10,7 @@ export const metadata = {
 async function getPlans() {
   try {
     return await prisma.plan.findMany({
-      where: { isActive: true },
+      where: { isActive: true, NOT: { type: "longevity" } },
       orderBy: { price: "asc" },
     });
   } catch {

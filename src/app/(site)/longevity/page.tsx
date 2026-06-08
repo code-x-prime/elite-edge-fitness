@@ -1,7 +1,9 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { IconActivity, IconShieldCheck, IconHeart, IconRotateDot, IconArrowRight, IconChecks } from "@tabler/icons-react";
 import Link from "next/link";
+import CheckoutModal from "@/components/plans/CheckoutModal";
 
 const PILLARS = [
   {
@@ -26,7 +28,47 @@ const PILLARS = [
   }
 ];
 
+interface DBPlan {
+  id: string;
+  name: string;
+  price: number;
+  duration: string;
+  features: string[];
+  description: string;
+  type: string;
+}
+
 export default function LongevityPage() {
+  const [dbPlan, setDbPlan] = useState<DBPlan | null>(null);
+  const [showCheckout, setShowCheckout] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/plans")
+      .then(r => r.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          const found = data.find((p: DBPlan) => p.type === "longevity");
+          if (found) setDbPlan(found);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const activePlan = dbPlan || {
+    id: "longevity-fallback",
+    name: "Longevity & Joint Health",
+    price: 4999,
+    duration: "1 Month",
+    features: [
+      "Personalized loaded-mobility training program",
+      "Custom anti-inflammatory nutrition plan",
+      "Direct 1-on-1 form correction reviews",
+      "Weekly check-ins and recovery coaching",
+      "Unlimited direct WhatsApp support with Coach Gineel N"
+    ],
+    description: "A specialized 1-on-1 personal conditioning and recovery plan focused entirely on structural balance, mobility flow, and injury resilience."
+  };
+
   return (
     <div className="bg-[#0A0A0A] text-white min-h-screen pt-20">
       
@@ -75,15 +117,18 @@ export default function LongevityPage() {
               </Link>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 relative">
-            <div className="border border-white/10 p-2 bg-[#111111]/80 backdrop-blur-sm rounded-lg shadow-2xl overflow-hidden aspect-[4/3] md:aspect-[16/10]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/split-flag.jpg"
-                alt="Coach Gineel split under flag"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
+          
+          <div className="w-full lg:w-1/2 flex items-center justify-center relative min-h-[350px]">
+            {/* Glow backing */}
+            <div
+              className="absolute w-[260px] h-[260px] bg-[#FF6B00]/15 rounded-full pointer-events-none filter blur-[50px] z-0"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/training-plan-illus.png"
+              alt="Coach Gineel Fitness Plan"
+              className="relative z-10 w-full h-auto max-h-[440px] object-contain drop-shadow-[0_16px_32px_rgba(255,107,0,0.25)] mx-auto block"
+            />
           </div>
         </div>
       </section>
@@ -173,25 +218,19 @@ export default function LongevityPage() {
             </div>
             
             <p className="text-[#FF6B00] text-xs font-body font-bold uppercase tracking-wider mb-2">Coaching Package</p>
-            <h3 className="font-heading text-3xl uppercase text-white mb-4">Longevity &amp; Joint Health</h3>
+            <h3 className="font-heading text-3xl uppercase text-white mb-4">{activePlan.name}</h3>
             
             <div className="flex items-baseline gap-2 mb-6">
-              <span className="font-heading text-5xl text-[#FF6B00]">₹4,999</span>
-              <span className="text-white/40 text-sm font-body">/ Month</span>
+              <span className="font-heading text-5xl text-[#FF6B00]">₹{activePlan.price.toLocaleString("en-IN")}</span>
+              <span className="text-white/40 text-sm font-body">/ {activePlan.duration}</span>
             </div>
 
             <p className="text-white/60 text-xs font-body leading-relaxed mb-6 border-b border-white/10 pb-6">
-              A specialized 1-on-1 personal conditioning and recovery plan focused entirely on structural balance, mobility flow, and injury resilience.
+              {activePlan.description || "A specialized 1-on-1 personal conditioning and recovery plan focused entirely on structural balance, mobility flow, and injury resilience."}
             </p>
 
             <ul className="space-y-4 mb-8">
-              {[
-                "Personalized loaded-mobility training program",
-                "Custom anti-inflammatory nutrition plan",
-                "Direct 1-on-1 form correction reviews",
-                "Weekly check-ins and recovery coaching",
-                "Unlimited direct WhatsApp support with Coach Gineel N"
-              ].map((f, i) => (
+              {(activePlan.features || []).map((f: string, i: number) => (
                 <li key={i} className="flex items-start gap-3 text-sm font-body text-white/80">
                   <IconChecks size={18} className="text-[#FF6B00] flex-shrink-0 mt-0.5" />
                   {f}
@@ -199,12 +238,12 @@ export default function LongevityPage() {
               ))}
             </ul>
 
-            <Link
-              href="/payments"
+            <button
+              onClick={() => setShowCheckout(true)}
               className="flex items-center justify-center gap-3 w-full py-4 bg-[#FF6B00] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#E55A00] transition-colors font-body"
             >
               Get Started Now <IconArrowRight size={16} />
-            </Link>
+            </button>
 
             <p className="mt-4 text-[10px] text-center text-white/30 font-body">
               All plans are subject to our strict No Refund Policy.
@@ -212,6 +251,19 @@ export default function LongevityPage() {
           </div>
         </div>
       </section>
+
+      {/* Checkout Modal integration */}
+      {showCheckout && (
+        <CheckoutModal
+          plan={{
+            id: activePlan.id,
+            name: activePlan.name,
+            price: activePlan.price,
+            duration: activePlan.duration
+          }}
+          onClose={() => setShowCheckout(false)}
+        />
+      )}
 
     </div>
   );
