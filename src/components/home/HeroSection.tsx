@@ -85,7 +85,13 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="font-heading text-[clamp(4.5rem,10vw,8rem)] leading-[0.88] text-white uppercase"
             >
-              STOP GUESSING.
+              STOP{" "}
+              <span
+                className="text-[#FF6B00]"
+                style={{ textShadow: "0 0 60px rgba(255,107,0,0.5), 0 0 120px rgba(255,107,0,0.2)" }}
+              >
+                GUESSING.
+              </span>
             </motion.h1>
           </div>
 
@@ -94,7 +100,7 @@ export default function HeroSection() {
               initial={{ y: 120, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading text-[clamp(4.5rem,10vw,8rem)] leading-[0.88] uppercase"
+              className="font-heading text-[clamp(4.5rem,10vw,8rem)] leading-[0.88] text-white uppercase"
             >
               START{" "}
               <span

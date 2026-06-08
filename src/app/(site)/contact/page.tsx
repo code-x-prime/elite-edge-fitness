@@ -18,8 +18,8 @@ export const metadata = {
 const info = [
   { Icon: IconMapPin, label: "Address", value: "Anand Garage, Ameya Bunglow, Plot no 20-C, 12th lane, Ganesh kripa soc, Kothrud, 411038" },
   { Icon: IconPhone, label: "Phone", value: "+91 9665962938", href: "tel:+919665962938" },
-  { Icon: IconMail, label: "Email", value: "contact@eliteedgefitness.in", href: "mailto:contact@eliteedgefitness.in" },
-  { Icon: IconClock, label: "Hours", value: "MON–SUN: 6:00 AM – 10:00 PM" },
+  { Icon: IconMail, label: "Email", value: "eliteedgefitness09@gmail.com", href: "mailto:eliteedgefitness09@gmail.com" },
+  { Icon: IconClock, label: "Hours", value: "MON–SAT: 6:00 AM – 10:00 PM (SUN OFF)" },
 ];
 
 const socials = [

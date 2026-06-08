@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -18,6 +18,8 @@ const quickLinks = [
   { href: "/plans", label: "Plans" },
   { href: "/contact", label: "Contact" },
   { href: "/payments", label: "Payments" },
+  { href: "/parq", label: "PAR-Q Form" },
+  { href: "/terms", label: "Terms & Conditions" },
 ];
 
 const services = [
@@ -121,13 +123,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <IconMail size={16} className="text-[#FF6B00] flex-shrink-0" />
-                <a href="mailto:contact@eliteedgefitness.in" className="text-sm text-[#999] hover:text-white transition-colors font-body">
-                  contact@eliteedgefitness.in
+                <a href="mailto:eliteedgefitness09@gmail.com" className="text-sm text-[#999] hover:text-white transition-colors font-body">
+                  eliteedgefitness09@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <IconClock size={16} className="text-[#FF6B00] flex-shrink-0" />
-                <span className="text-sm text-[#999] font-body">MON–SUN: 6:00 – 22:00</span>
+                <span className="text-sm text-[#999] font-body">MON–SAT: 6:00 AM – 10:00 PM (SUN OFF)</span>
               </li>
             </ul>
           </div>

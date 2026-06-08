@@ -45,6 +45,7 @@ const METHODS = [
     steps: ["Open PhonePe / Paytm / BHIM", "Go to Send Money → UPI ID", "Enter ngineel@upi", "Enter amount → Pay"],
     link: null,
     linkLabel: null,
+    qrCode: "/upi-qr.png",
   },
   {
     id: "paypal",
@@ -124,54 +125,66 @@ export default function PaymentsPage() {
             {METHODS.map((m) => (
               <div
                 key={m.id}
-                className="group bg-white border-2 border-[#E8E8E8] hover:border-[#FF6B00] transition-all duration-300 hover:shadow-xl overflow-hidden"
+                className="group bg-white border-2 border-[#E8E8E8] hover:border-[#FF6B00] transition-all duration-300 hover:shadow-xl overflow-hidden flex flex-col justify-between"
               >
-                {/* Accent top bar */}
-                <div className={`h-1.5 w-full ${m.accentBar}`} />
+                <div>
+                  {/* Accent top bar */}
+                  <div className={`h-1.5 w-full ${m.accentBar}`} />
 
-                {/* Card header */}
-                <div className="p-6 flex items-start gap-5 border-b border-[#F4F4F4]">
-                  {/* Logo placeholder — replace with <img> */}
-                  <div className={`w-14 h-14 ${m.iconBg} rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm border border-[#E8E8E8]`}>
-                    <m.Icon size={28} className={m.iconColor} stroke={1.5}/>
+                  {/* Card header */}
+                  <div className="p-6 flex items-start gap-5 border-b border-[#F4F4F4]">
+                    <div className={`w-14 h-14 ${m.iconBg} rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm border border-[#E8E8E8]`}>
+                      <m.Icon size={28} className={m.iconColor} stroke={1.5}/>
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-2xl uppercase text-[#0A0A0A] leading-tight">{m.name}</h3>
+                      <span className="inline-block mt-1 text-[10px] font-body font-bold uppercase tracking-widest text-[#FF6B00] bg-[#FF6B00]/8 px-2 py-0.5">
+                        {m.tag}
+                      </span>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-heading text-2xl uppercase text-[#0A0A0A] leading-tight">{m.name}</h3>
-                    <span className="inline-block mt-1 text-[10px] font-body font-bold uppercase tracking-widest text-[#FF6B00] bg-[#FF6B00]/8 px-2 py-0.5">
-                      {m.tag}
-                    </span>
+
+                  <div className="p-6 space-y-5">
+                    {/* Details — big, scannable */}
+                    <div className="space-y-3">
+                      {m.details.map((d) => (
+                        <div key={d.label} className="flex items-center justify-between gap-4 bg-[#F8F8F8] px-4 py-3">
+                          <span className="text-xs font-body font-bold uppercase tracking-widest text-[#999] flex-shrink-0">{d.label}</span>
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className="font-mono text-sm font-bold text-[#0A0A0A] truncate">{d.value}</span>
+                            {d.copy && <CopyButton value={d.value}/>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* QR Code display */}
+                    {"qrCode" in m && m.qrCode && (
+                      <div className="flex flex-col items-center justify-center p-4 bg-[#F8F8F8] border border-[#E8E8E8] rounded-md">
+                        <p className="text-[10px] font-body font-bold uppercase tracking-widest text-[#666] mb-3">Scan to Pay via UPI</p>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={m.qrCode} alt="UPI QR Code" className="w-44 h-44 object-contain shadow-sm border border-[#E8E8E8] bg-white p-2 rounded" />
+                      </div>
+                    )}
+
+                    {/* Steps */}
+                    <div className="bg-[#FFF8F4] border border-[#FF6B00]/15 p-4">
+                      <p className="text-[10px] font-body font-bold uppercase tracking-widest text-[#FF6B00] mb-3">How to Pay</p>
+                      <ol className="space-y-1.5">
+                        {m.steps.map((step, i) => (
+                          <li key={i} className="flex items-start gap-2.5 text-sm font-body text-[#444]">
+                            <span className="w-5 h-5 bg-[#FF6B00] text-white text-[10px] font-black flex items-center justify-center flex-shrink-0 mt-0.5 rounded-full">
+                              {i + 1}
+                            </span>
+                            {step}
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-6 space-y-5">
-                  {/* Details — big, scannable */}
-                  <div className="space-y-3">
-                    {m.details.map((d) => (
-                      <div key={d.label} className="flex items-center justify-between gap-4 bg-[#F8F8F8] px-4 py-3">
-                        <span className="text-xs font-body font-bold uppercase tracking-widest text-[#999] flex-shrink-0">{d.label}</span>
-                        <div className="flex items-center gap-2 min-w-0">
-                          <span className="font-mono text-sm font-bold text-[#0A0A0A] truncate">{d.value}</span>
-                          {d.copy && <CopyButton value={d.value}/>}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Steps */}
-                  <div className="bg-[#FFF8F4] border border-[#FF6B00]/15 p-4">
-                    <p className="text-[10px] font-body font-bold uppercase tracking-widest text-[#FF6B00] mb-3">How to Pay</p>
-                    <ol className="space-y-1.5">
-                      {m.steps.map((step, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-sm font-body text-[#444]">
-                          <span className="w-5 h-5 bg-[#FF6B00] text-white text-[10px] font-black flex items-center justify-center flex-shrink-0 mt-0.5 rounded-full">
-                            {i + 1}
-                          </span>
-                          {step}
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
-
+                <div className="p-6 pt-0">
                   {/* CTA link */}
                   {m.link && (
                     <a
@@ -186,6 +199,26 @@ export default function PaymentsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── REFUND POLICY & POLICY DISCLAIMER ── */}
+      <section className="pb-16 bg-white border-t border-[#E8E8E8] pt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#FFF8F4] border-2 border-[#FF6B00] p-8 md:p-10 flex flex-col md:flex-row items-start gap-6">
+            <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center flex-shrink-0 text-[#FF6B00] border border-[#FF6B00]/20">
+              <IconShieldCheck size={26} stroke={1.5} className="text-[#FF6B00]" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-heading text-3xl text-[#0A0A0A] uppercase mb-3">No Refund Policy</h3>
+              <p className="text-[#555] font-body text-sm leading-relaxed mb-4">
+                Please note that all programs, packages, training plans, and digital products offered by Elite Edge Fitness are final and non-refundable. Once payment is processed, no refunds, partial refunds, or program cancellations will be issued under any circumstances.
+              </p>
+              <p className="text-[#FF6B00] font-body text-xs font-bold uppercase tracking-wider">
+                • All sales are final • Non-transferable • Non-refundable
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -221,7 +254,7 @@ export default function PaymentsPage() {
               </a>
 
               <a
-                href="mailto:contact@eliteedgefitness.in?subject=Payment%20Confirmation%20-%20Elite%20Edge%20Fitness"
+                href="mailto:eliteedgefitness09@gmail.com?subject=Payment%20Confirmation%20-%20Elite%20Edge%20Fitness"
                 className="flex items-center gap-4 bg-white border-2 border-[#E8E8E8] hover:border-[#FF6B00] hover:shadow-md p-5 transition-all group"
               >
                 <div className="w-12 h-12 bg-[#FF6B00] rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -229,7 +262,7 @@ export default function PaymentsPage() {
                 </div>
                 <div className="flex-1">
                   <p className="font-body font-bold text-sm text-[#0A0A0A]">Email</p>
-                  <p className="text-xs text-[#666] font-body">contact@eliteedgefitness.in</p>
+                  <p className="text-xs text-[#666] font-body">eliteedgefitness09@gmail.com</p>
                 </div>
                 <IconArrowRight size={16} className="text-[#CCC] group-hover:text-[#FF6B00] transition-colors"/>
               </a>

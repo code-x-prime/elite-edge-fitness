@@ -423,6 +423,11 @@ export default function CheckoutModal({ plan, onClose }: CheckoutModalProps) {
                 {loading ? "Processing..." : `Pay ₹${plan.price.toLocaleString("en-IN")}`}
               </Button>
             </div>
+            <p className="text-[10px] text-center text-[#888] font-body leading-normal px-2">
+              By purchasing, you agree to our{" "}
+              <a href="/parq" target="_blank" className="text-[#FF6B00] hover:underline font-bold">PAR-Q Form</a>,{" "}
+              <a href="/terms" target="_blank" className="text-[#FF6B00] hover:underline font-bold">Training Terms &amp; Conditions</a>, and our <span className="font-bold">No Refund Policy</span> (all sales final).
+            </p>
             <p className="text-xs text-center text-[#888] font-body">Secured by Razorpay &middot; UPI &middot; Cards &middot; Net Banking</p>
           </div>
         )}
