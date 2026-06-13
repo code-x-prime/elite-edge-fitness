@@ -2,8 +2,7 @@ import Link from "next/link";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
-  IconBrandX,
-  IconBrandSnapchat,
+  IconBrandYoutube,
   IconMapPin,
   IconPhone,
   IconMail,
@@ -32,10 +31,9 @@ const services = [
 ];
 
 const socials = [
-  { Icon: IconBrandFacebook, href: "#", label: "Facebook" },
-  { Icon: IconBrandInstagram, href: "#", label: "Instagram" },
-  { Icon: IconBrandX, href: "#", label: "Twitter / X" },
-  { Icon: IconBrandSnapchat, href: "#", label: "Snapchat" },
+  { Icon: IconBrandFacebook, href: "https://www.facebook.com/gineelnfitness?mibextid=LQQJ4d", label: "Facebook" },
+  { Icon: IconBrandInstagram, href: "https://www.instagram.com/eliteedgefitness09?igsh=MW91c2lqbmp1amI2aQ==", label: "Instagram" },
+  { Icon: IconBrandYoutube, href: "https://youtube.com/@ginieel?si=e4KhSkIY5cFIUK2j", label: "YouTube" },
 ];
 
 export default function Footer() {

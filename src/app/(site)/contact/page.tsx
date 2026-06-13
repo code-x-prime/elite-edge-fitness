@@ -8,7 +8,6 @@ import {
   IconBrandInstagram,
   IconBrandYoutube,
   IconBrandFacebook,
-  IconBrandWhatsapp,
 } from "@tabler/icons-react";
 
 export const metadata = {
@@ -23,10 +22,9 @@ const info = [
 ];
 
 const socials = [
-  { label: "Instagram", Icon: IconBrandInstagram, href: "#" },
-  { label: "YouTube", Icon: IconBrandYoutube, href: "#" },
-  { label: "Facebook", Icon: IconBrandFacebook, href: "#" },
-  { label: "WhatsApp", Icon: IconBrandWhatsapp, href: "https://wa.me/919665962938" },
+  { label: "Facebook", Icon: IconBrandFacebook, href: "https://www.facebook.com/gineelnfitness?mibextid=LQQJ4d" },
+  { label: "Instagram", Icon: IconBrandInstagram, href: "https://www.instagram.com/eliteedgefitness09?igsh=MW91c2lqbmp1amI2aQ==" },
+  { label: "YouTube", Icon: IconBrandYoutube, href: "https://youtube.com/@ginieel?si=e4KhSkIY5cFIUK2j" },
 ];
 
 export default function ContactPage() {
