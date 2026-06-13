@@ -79,7 +79,7 @@ export default function ParQPage() {
             </h2>
             <p className="text-white/60 font-body text-sm leading-relaxed mb-6">
               {hasYes ? (
-                "Since you answered 'YES' to one or more questions, we strongly recommend you consult with your physician before beginning any physical activity. Please obtain a medical clearance note to submit to Coach Gineel."
+                "Since you answered 'YES' to one or more questions, we strongly recommend you consult with your physician before beginning any physical activity. Please obtain a medical clearance note to submit to Ginieel - Founder (Elite Edge Fitness)."
               ) : (
                 "Thank you for completing the PAR-Q, " + clientName + ". Your screening indicates that you are physically ready to embark on your fitness journey with Elite Edge Fitness!"
               )}

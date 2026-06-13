@@ -97,7 +97,7 @@ async function main() {
     data: {
       name: "The Ultimate Fat Loss Guide",
       description:
-        "A comprehensive science-backed guide to sustainable fat loss. Includes meal plans, workout routines, mindset strategies, and supplement recommendations from Coach Gineel N.",
+        "A comprehensive science-backed guide to sustainable fat loss. Includes meal plans, workout routines, mindset strategies, and supplement recommendations from Ginieel - Founder (Elite Edge Fitness).",
       price: 499,
       pdfUrl: "/products/fat-loss-guide.pdf",
       isActive: true,

@@ -48,7 +48,7 @@ export default function WhatSetsApart() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/coach.png"
-                    alt="Coach Gineel N"
+                    alt="Ginieel - Founder (Elite Edge Fitness)"
                     className="w-full h-full object-cover object-top"
                   />
                   <div
@@ -72,12 +72,12 @@ export default function WhatSetsApart() {
               <div>
                 {/* Eyebrow */}
                 <p className="font-body font-bold text-[#FF6B00] text-xs uppercase tracking-[0.3em] mb-4">
-                  / MEET THE COACH
+                  / GINIEEL - FOUNDER
                 </p>
 
                 {/* Description */}
                 <p className="font-body text-[#444] text-base leading-relaxed mb-10 max-w-lg">
-                  Coach Gineel N combines competitive bodybuilding experience with precision
+                  Ginieel - Founder (Elite Edge Fitness) combines competitive bodybuilding experience with precision
                   nutrition science — creating a coaching ecosystem built entirely around you.
                 </p>
 

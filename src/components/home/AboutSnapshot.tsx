@@ -13,7 +13,7 @@ const GRID_ITEMS = [
   {
     Icon: IconBarbell,
     label: "Personal Training",
-    img: "/services/personal-training.png",
+    img: "/services/female_personal_training.png",
     bg: "bg-[#1A1A1A]",
     accent: "text-[#FF6B00]",
     textColor: "text-white",
@@ -22,7 +22,7 @@ const GRID_ITEMS = [
   {
     Icon: IconUsers,
     label: "Group Sessions",
-    img: "/services/group-training.png",
+    img: "/services/female_group_session.png",
     bg: "bg-[#FF6B00]",
     accent: "text-white",
     textColor: "text-white",
@@ -64,13 +64,13 @@ export default function AboutSnapshot() {
           {/* Left */}
           <FadeUp>
             <h2 className="font-heading text-5xl md:text-6xl lg:text-7xl text-[#0A0A0A] leading-tight uppercase">
-              Building Pune&apos;s<br />
-              <span className="text-[#FF6B00]">Most Elite</span><br />
-              Fitness Coach
+              Elite Coaching For<br />
+              <span className="text-[#FF6B00]">Men &amp; Women</span><br />
+              In Pune
             </h2>
 
             <p className="text-[#666] font-body text-base leading-relaxed mt-8 mb-10 max-w-md">
-              Coach Gineel N combines 13+ years of competitive bodybuilding experience with precision nutrition science to deliver transformations that last a lifetime. Not a gym — a coaching ecosystem designed around you.
+              Ginieel - Founder (Elite Edge Fitness) combines 13+ years of competitive experience with precision nutrition science to deliver transformations that last a lifetime. Tailored training and diet design for all goals, fitness levels, and genders.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -78,7 +78,7 @@ export default function AboutSnapshot() {
                 href="/about"
                 className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white text-xs font-bold uppercase tracking-widest px-7 py-4 hover:bg-[#FF6B00] transition-all duration-200"
               >
-                Meet the Coach &#x2192;
+                Ginieel - Founder &#x2192;
               </Link>
               <Link
                 href="/plans"

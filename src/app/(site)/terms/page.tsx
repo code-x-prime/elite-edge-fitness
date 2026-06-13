@@ -23,7 +23,7 @@ const TERMS = [
   },
   {
     title: "5. Code of Conduct & Gym Rules",
-    text: "Clients must follow gym etiquette and respect safety guidelines. Coach Gineel N reserves the right to terminate training agreements without refund if a client exhibits disrespectful, unsafe, or disruptive behavior."
+    text: "Clients must follow gym etiquette and respect safety guidelines. Ginieel - Founder (Elite Edge Fitness) reserves the right to terminate training agreements without refund if a client exhibits disrespectful, unsafe, or disruptive behavior."
   }
 ];
 
@@ -129,7 +129,7 @@ export default function TermsPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/split-flag.jpg"
-                    alt="Coach Gineel Split"
+                    alt="Ginieel - Founder (Elite Edge Fitness) Split"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-[#0A0A0A]/20 hover:bg-transparent transition-colors duration-300" />

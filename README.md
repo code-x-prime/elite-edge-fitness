@@ -1,6 +1,6 @@
 # Elite Edge Fitness
 
-Full-stack fitness website for Elite Edge Fitness by Coach Gineel N.
+Full-stack fitness website for Elite Edge Fitness by Ginieel - Founder (Elite Edge Fitness).
 
 ## Stack
 
@@ -33,7 +33,7 @@ npm run dev
 | Route | Description |
 |-------|-------------|
 | `/` | Home — hero, stats, coach teaser, programs, services, testimonials, blog |
-| `/about` | Coach Gineel N full profile |
+| `/about` | Ginieel - Founder (Elite Edge Fitness) full profile |
 | `/gallery` | Masonry grid, category filter, lightbox |
 | `/plans` | Training plans + Razorpay checkout modal |
 | `/payments` | Manual payment methods (GPay, UPI, PayPal, HSBC) |

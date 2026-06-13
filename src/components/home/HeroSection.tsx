@@ -49,7 +49,7 @@ export default function HeroSection() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/coach.png"
-          alt="Coach Gineel N"
+          alt="Ginieel - Founder (Elite Edge Fitness)"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
         {/* Left fade over image */}
@@ -120,7 +120,7 @@ export default function HeroSection() {
             className="text-white/55 font-body text-base md:text-lg leading-relaxed max-w-lg mb-10"
           >
             Your complete fitness transformation with Elite Edge Fitness — science-backed training,
-            precision nutrition, and relentless 1-on-1 coaching by Gineel N.
+            precision nutrition, and relentless 1-on-1 coaching customized for both men and women.
           </motion.p>
 
           {/* CTAs */}
@@ -141,7 +141,7 @@ export default function HeroSection() {
               href="/about"
               className="inline-flex items-center gap-2 text-white/60 font-body font-bold text-sm uppercase tracking-widest hover:text-white transition-colors border-b border-white/20 hover:border-white pb-0.5"
             >
-              Meet the Coach
+              Ginieel - Founder
             </Link>
           </motion.div>
 

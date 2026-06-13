@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeUp } from "@/components/ui/FadeUp";
 
@@ -27,7 +27,7 @@ export default function CoachSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/profile.jpeg"
-                  alt="Coach Gineel N"
+                  alt="Ginieel - Founder (Elite Edge Fitness)"
                   className="absolute inset-0 w-full h-full object-cover object-top"
                 />
                 {/* Bottom gradient overlay */}
@@ -48,10 +48,10 @@ export default function CoachSection() {
 
           {/* Content */}
           <FadeUp delay={0.2}>
-            <SectionHeader eyebrow="Meet the Coach" title="DREAM. BELIEVE. ACHIEVE." />
+            <SectionHeader eyebrow="Ginieel - Founder (Elite Edge Fitness)" title="DREAM. BELIEVE. ACHIEVE." />
 
             <p className="text-[#555] font-body leading-relaxed mt-8 mb-8">
-              Gineel N is not just known for his amazing physique, but for his Character and High Standards in representing the sports fitness industry. With over 13 years of dedicated coaching, he has transformed hundreds of lives through science-backed training and nutrition.
+              Ginieel is not just known for his amazing physique, but for his Character and High Standards in representing the sports fitness industry. With over 13 years of dedicated coaching, he has transformed hundreds of men and women through science-backed training and nutrition.
             </p>
 
             <p className="font-body font-bold uppercase tracking-[0.2em] text-[#FF6B00] text-xs mb-4">

@@ -29,8 +29,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeUp>
               <p className="text-[#FF6B00] text-xs font-body font-bold uppercase tracking-[0.3em] mb-4">/ Your Coach</p>
-              <h1 className="font-heading text-6xl md:text-8xl text-[#0A0A0A] leading-none uppercase">GINEEL N</h1>
-              <div className="h-1 w-20 bg-[#FF6B00] mt-4 mb-6" />
+              <h1 className="font-heading text-6xl md:text-8xl text-[#0A0A0A] leading-none uppercase">GINIEEL</h1>
+              <p className="text-[#FF6B00] text-sm font-body font-bold uppercase tracking-[0.2em] mt-2 mb-4">Founder (Elite Edge Fitness)</p>
+              <div className="h-1 w-20 bg-[#FF6B00] mb-6" />
               <h2 className="font-heading text-3xl uppercase text-[#0A0A0A] mb-6">
                 Elite Edge <span className="text-[#FF6B00]">Fitness</span>
               </h2>
@@ -57,7 +58,7 @@ export default function AboutPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/profile.jpeg"
-                    alt="Coach Gineel N"
+                    alt="Ginieel - Founder (Elite Edge Fitness)"
                     className="w-full h-full object-cover object-top"
                   />
                   {/* Subtle bottom gradient overlay */}

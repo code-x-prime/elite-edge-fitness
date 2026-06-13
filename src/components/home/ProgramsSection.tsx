@@ -14,7 +14,7 @@ const FALLBACK: PricingPlan[] = [
   {
     id: "2", name: "Personal Training", type: "personal", price: 5999, period: "1 Month",
     features: ["1-on-1 personal sessions", "Custom workout program", "Custom nutrition plan", "Daily check-ins", "Priority support", "Body composition analysis"],
-    description: "Maximum results with dedicated 1-on-1 coaching by Coach Gineel N.",
+    description: "Maximum results with dedicated 1-on-1 coaching by Ginieel - Founder (Elite Edge Fitness).",
     buttonText: "Choose Plan", href: "/plans", isPopular: true,
   },
   {
@@ -42,7 +42,7 @@ export default function ProgramsSection() {
           period: p.duration,
           features: p.features ?? [],
           description: p.popular
-            ? "Maximum results with dedicated 1-on-1 coaching by Coach Gineel N."
+            ? "Maximum results with dedicated 1-on-1 coaching by Ginieel - Founder (Elite Edge Fitness)."
             : p.type === "online"
             ? "Elite coaching delivered anywhere in the world."
             : "Train with a motivated group and build lasting fitness habits.",
@@ -61,7 +61,7 @@ export default function ProgramsSection() {
         <Pricing
           plans={plans}
           title="OUR BEST PROGRAMS"
-          description="Choose the right plan for your goals. Every program is built for real, lasting results by Coach Gineel N."
+          description="Choose the right plan for your goals. Every program is built for real, lasting results by Ginieel - Founder (Elite Edge Fitness)."
           onSelect={(plan) => setSelected(plan as PricingPlan & { id: string; name: string; price: number; duration: string })}
         />
 

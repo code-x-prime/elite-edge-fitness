@@ -19,8 +19,8 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Elite Edge Fitness — Unlock Your Elite Potential",
   description:
-    "Transform your body and mind with Elite Edge Fitness. Personal training, online coaching, and fitness programs by Gineel N — Kothrud, Pune.",
-  keywords: ["fitness", "gym", "personal trainer", "Kothrud", "Pune", "Elite Edge Fitness", "Gineel N"],
+    "Transform your body and mind with Elite Edge Fitness. Personal training, online coaching, and fitness programs by Ginieel — Kothrud, Pune.",
+  keywords: ["fitness", "gym", "personal trainer", "Kothrud", "Pune", "Elite Edge Fitness", "Ginieel"],
 };
 
 export default function RootLayout({

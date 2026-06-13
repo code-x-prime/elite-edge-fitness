@@ -13,7 +13,7 @@ const FAQS_LEFT = [
   {
     question: "What makes Elite Edge Fitness different from other trainers?",
     answer:
-      "13+ years of dedicated coaching, science-backed programming, and genuine 1-on-1 attention every session. Every plan is built specifically for your body, goals, and lifestyle — not a copy-paste template. Gineel N personally handles every client.",
+      "13+ years of dedicated coaching, science-backed programming, and genuine 1-on-1 attention every session. Every plan is built specifically for your body, goals, and lifestyle — not a copy-paste template. Ginieel personally handles every client.",
   },
   {
     question: "How do I enroll in a training plan?",
@@ -54,7 +54,7 @@ const FAQS_RIGHT = [
       "Razorpay (UPI, cards, net banking), Google Pay (+91 9665962938), PhonePe, PayPal (paypal.me/ngineel), and HSBC bank transfer. See the Payments page for full details.",
   },
   {
-    question: "How do I contact Coach Gineel N directly?",
+    question: "How do I contact Ginieel - Founder (Elite Edge Fitness) directly?",
     answer:
       "WhatsApp at +91 9665962938, email at eliteedgefitness09@gmail.com, or use the Contact page form. Response guaranteed within 24 hours — usually much faster.",
   },

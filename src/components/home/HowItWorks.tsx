@@ -17,7 +17,7 @@ const STEPS = [
   {
     Icon: IconTrophy,
     title: "Start Your Journey",
-    desc: "Begin transformation with expert coaching, custom nutrition, and relentless support by Gineel N.",
+    desc: "Begin transformation with expert coaching, custom nutrition, and relentless support by Ginieel.",
     style: "active",
   },
 ];

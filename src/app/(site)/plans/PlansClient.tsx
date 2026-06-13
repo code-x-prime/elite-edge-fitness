@@ -43,7 +43,7 @@ export default function PlansClient({ plans, products }: PlansClientProps) {
     period: p.duration,
     features: p.features ?? [],
     description: p.popular
-      ? "Maximum results with dedicated 1-on-1 coaching by Coach Gineel N."
+      ? "Maximum results with dedicated 1-on-1 coaching by Ginieel - Founder (Elite Edge Fitness)."
       : p.type === "online"
       ? "Elite coaching delivered anywhere in the world."
       : p.type === "elite"
@@ -109,7 +109,7 @@ export default function PlansClient({ plans, products }: PlansClientProps) {
 
                     {/* Features */}
                     <ul className="space-y-2 mb-7">
-                      {["Instant PDF download after payment","Science-backed content by Coach Gineel N","Meal plans, workouts & mindset strategies","Lifetime access"].map(f => (
+                      {["Instant PDF download after payment","Science-backed content by Ginieel - Founder (Elite Edge Fitness)","Meal plans, workouts & mindset strategies","Lifetime access"].map(f => (
                         <li key={f} className="flex items-start gap-2 text-sm text-[#444] font-body">
                           <IconCheck size={15} className="text-[#FF6B00] flex-shrink-0 mt-0.5" strokeWidth={2.5}/>
                           {f}

@@ -64,7 +64,7 @@ export default function LongevityPage() {
       "Custom anti-inflammatory nutrition plan",
       "Direct 1-on-1 form correction reviews",
       "Weekly check-ins and recovery coaching",
-      "Unlimited direct WhatsApp support with Coach Gineel N"
+      "Unlimited direct WhatsApp support with Ginieel - Founder (Elite Edge Fitness)"
     ],
     description: "A specialized 1-on-1 personal conditioning and recovery plan focused entirely on structural balance, mobility flow, and injury resilience."
   };
@@ -100,7 +100,7 @@ export default function LongevityPage() {
               </span>
             </h1>
             <p className="text-white/60 font-body text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-              Don&apos;t just build muscles — build a body that lasts. Our Longevity Program integrates calisthenics, flexibility, joint prehab, and recovery protocols under the direct supervision of Coach Gineel N.
+              Don&apos;t just build muscles — build a body that lasts. Our Longevity Program integrates calisthenics, flexibility, joint prehab, and recovery protocols under the direct supervision of Ginieel - Founder (Elite Edge Fitness).
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
@@ -113,7 +113,7 @@ export default function LongevityPage() {
                 href="/about"
                 className="text-white/60 font-body font-bold text-xs uppercase tracking-widest hover:text-white transition-colors border-b border-white/20 pb-0.5"
               >
-                Meet Coach Gineel
+                Meet Ginieel - Founder (Elite Edge Fitness)
               </Link>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function LongevityPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/split-flag.jpg"
-                alt="Coach Gineel split under flag"
+                alt="Ginieel - Founder (Elite Edge Fitness) split under flag"
                 className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -170,7 +170,7 @@ export default function LongevityPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/pushup-pose.jpg"
-              alt="Coach Gineel pushup pose"
+              alt="Ginieel - Founder (Elite Edge Fitness) pushup pose"
               className="w-full h-auto object-cover border border-white/10 rounded"
             />
           </div>

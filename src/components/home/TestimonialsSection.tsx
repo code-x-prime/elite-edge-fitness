@@ -15,7 +15,7 @@ const TESTIMONIALS: Testimonial[] = [
   {
     name: "Dr. Gaurav Chhabra",
     role: "Medical Professional",
-    quote: "Fantabulous. Amazing transformation journey. Gineel's approach is scientific, motivating, and results-driven. Lost 18kg in 4 months while maintaining muscle. Highly recommend!",
+    quote: "Fantabulous. Amazing transformation journey. Ginieel's approach is scientific, motivating, and results-driven. Lost 18kg in 4 months while maintaining muscle. Highly recommend!",
     rating: 5,
   },
   {
@@ -27,19 +27,19 @@ const TESTIMONIALS: Testimonial[] = [
   {
     name: "Monika Huparikar-Kalurkar",
     role: "Homemaker",
-    quote: "I am getting trained by Gineel for 6 months and the results are incredible. He understands women's fitness perfectly and creates programs that actually work.",
+    quote: "I am getting trained by Ginieel for 6 months and the results are incredible. He understands women's fitness perfectly and creates programs that actually work.",
     rating: 5,
   },
   {
     name: "Megha Kataria",
     role: "Business Owner",
-    quote: "Gineel is very professional, knowledgeable and dedicated. His online training is as effective as in-person. Achieved my dream body while managing a busy schedule.",
+    quote: "Ginieel is very professional, knowledgeable and dedicated. His online training is as effective as in-person. Achieved my dream body while managing a busy schedule.",
     rating: 5,
   },
   {
     name: "Rahul Deshmukh",
     role: "IT Professional",
-    quote: "The science behind every workout and diet plan is exceptional. Gineel doesn't just train you — he educates you to understand your own body. Truly elite coaching.",
+    quote: "The science behind every workout and diet plan is exceptional. Ginieel doesn't just train you — he educates you to understand your own body. Truly elite coaching.",
     rating: 5,
   },
   {
@@ -51,7 +51,7 @@ const TESTIMONIALS: Testimonial[] = [
   {
     name: "Arjun Patil",
     role: "Fitness Enthusiast",
-    quote: "Contest prep with Gineel was a completely different experience. His attention to detail on stage presentation and peak week strategy is unmatched in Pune.",
+    quote: "Contest prep with Ginieel was a completely different experience. His attention to detail on stage presentation and peak week strategy is unmatched in Pune.",
     rating: 5,
   },
   {

@@ -81,7 +81,7 @@ export default function PremiumSection() {
             <div className="h-full relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/premium/transformation.jpg"
+                src="/premium/female_transformation.png"
                 alt="Body Transformation"
                 className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
@@ -132,9 +132,9 @@ export default function PremiumSection() {
             <div className="h-full relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
               <div className="h-full grid grid-cols-3 gap-1">
                 {[
-                  { src: "/premium/training-1.jpg", label: "Personal Training" },
-                  { src: "/premium/training-2.jpg", label: "Group Sessions" },
-                  { src: "/premium/training-3.jpg", label: "Transformation" },
+                  { src: "/premium/female_personal_training.png", label: "Personal Training" },
+                  { src: "/premium/female_group_session.png", label: "Group Sessions" },
+                  { src: "/premium/transformation.jpg", label: "Transformation" },
                 ].map((item, i) => (
                   <div key={i} className="relative overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -197,7 +197,7 @@ export default function PremiumSection() {
                 <h3 className="font-heading text-2xl text-[#0A0A0A] leading-tight uppercase">Expert Guidance &amp; Online Coaching</h3>
               </div>
               <p className="text-[#666] text-sm font-body leading-relaxed relative z-10">
-                Train from anywhere. Video check-ins, form corrections, and 24/7 WhatsApp support from Coach Gineel.
+                Train from anywhere. Video check-ins, form corrections, and 24/7 WhatsApp support from Ginieel - Founder (Elite Edge Fitness).
               </p>
             </div>
           </FadeUp>
