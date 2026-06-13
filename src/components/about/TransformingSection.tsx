@@ -91,10 +91,10 @@ export default function TransformingSection() {
           <FadeUp delay={0.15}>
             <div className="grid grid-cols-2 gap-3 relative">
               {[
-                { src: "/premium/training-1.jpg", label: "Personal Training" },
-                { src: "/services/group-training.png", label: "Group Sessions" },
+                { src: "/premium/female_personal_training.png", label: "Personal Training" },
+                { src: "/premium/female_group_session.png", label: "Group Sessions" },
                 { src: "/premium/diet.jpg", label: "Nutrition" },
-                { src: "/services/contest-prep.png", label: "Contest Prep" },
+                { src: "/services/female_contest_prep.png", label: "Contest Prep" },
               ].map(({ src, label }, i) => (
                 <div
                   key={i}

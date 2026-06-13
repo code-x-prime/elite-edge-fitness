@@ -40,7 +40,7 @@ const GRID_ITEMS = [
   {
     Icon: IconTrophy,
     label: "Contest Prep",
-    img: "/services/contest-prep.png",
+    img: "/services/female_contest_prep.png",
     bg: "bg-[#0A0A0A]",
     accent: "text-[#FF6B00]",
     textColor: "text-white",

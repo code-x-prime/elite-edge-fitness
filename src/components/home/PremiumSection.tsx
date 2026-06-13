@@ -163,7 +163,7 @@ export default function PremiumSection() {
 
           {/* Card 6 — Contest prep photo */}
           <FadeUp delay={0.15}>
-            <ImgCard src="/premium/contest.jpg" label="Contest Prep" sub="Stage-Ready Conditioning" />
+            <ImgCard src="/premium/female_contest_prep.png" label="Contest Prep" sub="Stage-Ready Conditioning" />
           </FadeUp>
 
           {/* Card 7 — Progress tracking (text card) */}
