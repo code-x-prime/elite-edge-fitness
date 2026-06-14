@@ -10,6 +10,7 @@ import ServicesSection from "@/components/home/ServicesSection";
 import ProgramsSection from "@/components/home/ProgramsSection";
 import HowItWorks from "@/components/home/HowItWorks";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import TestimonialV2 from "@/components/ui/testimonial-v2";
 import FAQSection from "@/components/home/FAQSection";
 import CTABanner from "@/components/home/CTABanner";
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       <ServicesSection />
       <ProgramsSection />
       <HowItWorks />
+      <TestimonialV2 />
       <TestimonialsSection />
       <FAQSection />
       <CTABanner />

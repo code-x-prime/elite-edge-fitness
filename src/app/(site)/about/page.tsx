@@ -99,12 +99,24 @@ export default function AboutPage() {
               <h2 className="font-heading text-5xl md:text-6xl text-white leading-none uppercase mb-6">MY STORY</h2>
               <div className="h-1 w-16 bg-[#FF6B00] mb-10" />
               <div className="space-y-5 text-white/55 font-body text-sm leading-relaxed">
-                <p>Growing up, fitness was more than a hobby — it was a calling. From early morning training sessions to late-night nutrition research, the pursuit of physical excellence became my life&apos;s work.</p>
-                <p>After competing at state level in bodybuilding and achieving certifications in personal training and sports nutrition, I founded Elite Edge Fitness with one mission: to give every client the knowledge, tools, and motivation to transform their body and mindset.</p>
-                <p>Over 13 years, I&apos;ve worked with everyone from complete beginners to competitive athletes. Every transformation starts with the belief that you are capable of more than you currently think.</p>
-                <blockquote className="border-l-4 border-[#FF6B00] pl-5 py-1 text-white font-body italic">
-                  &ldquo;You are more than what you think. My job is to prove it to you.&rdquo;
-                </blockquote>
+                <p>There was a time when I was just an ordinary kid trying to find his place in the world.</p>
+                <p>Academics never came easy to me. Confidence was something I lacked, and loneliness often became my silent companion. I struggled with my studies, my fitness, my personality, and at times, even with myself. There were moments of tears, self-doubt, and endless questions about what life had in store for me.</p>
+                <p>Looking back, I can honestly say that empty pockets taught me lessons that full pockets never could. Adversity became my greatest teacher, and pain quietly shaped the man I was destined to become.</p>
+                <p>After completing my graduation and post-graduation, I landed what many considered a dream job at HSBC Bank. To the outside world, I had made it. Everyone believed my life was finally sorted. I had the respectable title, the white-collar career, and the security that society celebrates.</p>
+                <p>But deep down, something was dying.</p>
+                <p>Every morning felt like I was showing up for a life that belonged to someone else. I was earning a paycheck, but losing pieces of my soul. I realized that surviving and truly living are two very different things.</p>
+                <p>Through all those years, fitness remained the one passion that never left me. It wasn&apos;t just about building muscles—it was about building myself. Yet, in India, pursuing fitness as a profession was often met with skepticism. People laughed. Many questioned my dreams. Some called it foolish. Others simply couldn&apos;t understand.</p>
+                <p>But life has a beautiful way of placing angels in your journey.</p>
+                <p>I was fortunate to have a few people around me who believed in my vision when it was still invisible to everyone else. Their encouragement, their energy, and their faith became the fuel that I desperately needed.</p>
+                <p>And then came the biggest decision of my life.</p>
+                <p>I walked away from the comfort of my white-collar banking career. I chose uncertainty over security. I chose purpose over approval. I chose passion over predictability.</p>
+                <p>And that was the day <strong>GinieelnFitness 🏋️‍♂️💪🔥</strong> was born.</p>
+                <p>What started as a dream became a mission.</p>
+                <p>Today, my purpose goes far beyond transforming physiques. It is about transforming lives, inspiring people to believe in themselves, and proving that you don&apos;t have to live the life others expect from you.</p>
+                <p>Because sometimes, the greatest risk in life is not failing…</p>
+                <p className="text-[#FF6B00] font-semibold italic">It&apos;s succeeding in a life that was never meant for you.</p>
+                <p>This is not just my story. This is the story of choosing courage over comfort, purpose over popularity, and passion over fear.</p>
+                <p className="font-heading text-lg text-white uppercase tracking-wider">And trust me… I&apos;m only getting started.</p>
               </div>
             </FadeUp>
             <FadeUp delay={0.2}>

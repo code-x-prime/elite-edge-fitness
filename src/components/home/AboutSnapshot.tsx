@@ -70,7 +70,7 @@ export default function AboutSnapshot() {
             </h2>
 
             <p className="text-[#666] font-body text-base leading-relaxed mt-8 mb-10 max-w-md">
-              Ginieel - Founder (Elite Edge Fitness) combines 13+ years of competitive experience with precision nutrition science to deliver transformations that last a lifetime. Tailored training and diet design for all goals, fitness levels, and genders.
+              From walking away from a white-collar banking career at HSBC to founding GinieelnFitness, my mission has always been about choosing purpose over comfort. I combine 13+ years of fitness experience to help you transform your physique and mindset.
             </p>
 
             <div className="flex flex-wrap gap-4">

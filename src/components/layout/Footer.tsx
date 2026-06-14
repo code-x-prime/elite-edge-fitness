@@ -109,9 +109,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <IconMapPin size={16} className="text-[#FF6B00] flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-[#999] font-body leading-relaxed">
-                  Anand Garage, Ameya Bunglow, Plot no 20-C, 12th lane, Ganesh kripa soc, Kothrud, 411038
-                </span>
+                <a
+                  href="https://share.google/Ex3Pgh42Q3gVXb086"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#999] hover:text-white transition-colors font-body leading-relaxed"
+                >
+                  Hindu Gymkhana, Kothrud Lane Number 7, Rajpath Society, Paramhans Nagar Lane No 7, Paud Road, Kothrud, Pune, Maharashtra 411038
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <IconPhone size={16} className="text-[#FF6B00] flex-shrink-0" />

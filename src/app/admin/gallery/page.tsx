@@ -86,12 +86,12 @@ export default function AdminGalleryPage() {
       {/* Drag-drop uploader */}
       <div className="mb-6">
         <FileDropzone
-          accept="image/*"
+          accept="image/*,video/*"
           multiple
           folder="gallery"
-          label="Drop images here or click to upload"
-          hint="JPG, PNG, WEBP • max 10MB each • multiple files supported"
-          maxMB={10}
+          label="Drop images or videos here or click to upload"
+          hint="JPG, PNG, WEBP, MP4, WEBM • max 50MB each • multiple files supported"
+          maxMB={50}
           onUpload={handleUploaded}
         />
       </div>
@@ -112,29 +112,41 @@ export default function AdminGalleryPage() {
         </div>
       ) : filtered.length === 0 ? (
         <div className="bg-white border-2 border-dashed border-[#E8E8E8] p-12 text-center">
-          <p className="font-heading text-xl text-[#CCC]">NO IMAGES</p>
+          <p className="font-heading text-xl text-[#CCC]">NO MEDIA</p>
           <p className="text-sm text-[#999] font-body mt-1">Use the dropzone above to upload</p>
         </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
-          {filtered.map(img => (
-            <div key={img.id} className="group relative aspect-square bg-[#F4F4F4] border border-[#E8E8E8] overflow-hidden hover:border-[#FF6B00] transition-colors">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img.url} alt={img.title ?? ""} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/70 transition-all flex items-center justify-center gap-2 sm:gap-3 opacity-0 group-hover:opacity-100">
-                <button onClick={() => setEditModal({ open: true, img: { ...img } })} className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 border border-white/30 flex items-center justify-center text-white hover:bg-[#FF6B00] hover:border-[#FF6B00] transition-colors">
-                  <IconEdit size={14} stroke={1.5}/>
-                </button>
-                <button onClick={() => setDeleteId(img.id)} className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 border border-white/30 flex items-center justify-center text-white hover:bg-red-500 hover:border-red-500 transition-colors">
-                  <IconTrash size={14} stroke={1.5}/>
-                </button>
+          {filtered.map(img => {
+            const isVideo = /\.(mp4|webm|ogg|mov|m4v)$/i.test(img.url);
+            return (
+              <div key={img.id} className="group relative aspect-square bg-[#F4F4F4] border border-[#E8E8E8] overflow-hidden hover:border-[#FF6B00] transition-colors">
+                {isVideo ? (
+                  <video src={img.url} className="w-full h-full object-cover" muted playsInline />
+                ) : (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={img.url} alt={img.title ?? ""} className="w-full h-full object-cover" />
+                )}
+                <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/70 transition-all flex items-center justify-center gap-2 sm:gap-3 opacity-0 group-hover:opacity-100">
+                  <button onClick={() => setEditModal({ open: true, img: { ...img } })} className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 border border-white/30 flex items-center justify-center text-white hover:bg-[#FF6B00] hover:border-[#FF6B00] transition-colors">
+                    <IconEdit size={14} stroke={1.5}/>
+                  </button>
+                  <button onClick={() => setDeleteId(img.id)} className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 border border-white/30 flex items-center justify-center text-white hover:bg-red-500 hover:border-red-500 transition-colors">
+                    <IconTrash size={14} stroke={1.5}/>
+                  </button>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#0A0A0A]/60">
+                  <p className="text-white text-xs font-body truncate">{img.title || "Untitled"}</p>
+                  <p className="text-[#FF6B00] text-[10px] font-bold uppercase tracking-wide">{img.category}</p>
+                </div>
+                {isVideo && (
+                  <span className="absolute top-2 left-2 bg-black/60 text-white text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded">
+                    Video
+                  </span>
+                )}
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#0A0A0A]/60">
-                <p className="text-white text-xs font-body truncate">{img.title || "Untitled"}</p>
-                <p className="text-[#FF6B00] text-[10px] font-bold uppercase tracking-wide">{img.category}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
 

@@ -15,7 +15,12 @@ export const metadata = {
 };
 
 const info = [
-  { Icon: IconMapPin, label: "Address", value: "Anand Garage, Ameya Bunglow, Plot no 20-C, 12th lane, Ganesh kripa soc, Kothrud, 411038" },
+  { 
+    Icon: IconMapPin, 
+    label: "Address", 
+    value: "Hindu Gymkhana, Kothrud Lane Number 7, Rajpath Society, Paramhans Nagar Lane No 7, Paud Road, Kothrud, Pune, Maharashtra 411038",
+    href: "https://share.google/Ex3Pgh42Q3gVXb086"
+  },
   { Icon: IconPhone, label: "Phone", value: "+91 9665962938", href: "tel:+919665962938" },
   { Icon: IconMail, label: "Email", value: "eliteedgefitness09@gmail.com", href: "mailto:eliteedgefitness09@gmail.com" },
   { Icon: IconClock, label: "Hours", value: "MON–SAT: 6:00 AM – 10:00 PM (SUN OFF)" },
@@ -75,7 +80,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-[#FF6B00] mb-1 font-body">{item.label}</p>
                       {"href" in item && item.href ? (
-                        <a href={item.href} className="text-[#0A0A0A] font-semibold hover:text-[#FF6B00] transition-colors font-body text-sm">
+                        <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-[#0A0A0A] font-semibold hover:text-[#FF6B00] transition-colors font-body text-sm">
                           {item.value}
                         </a>
                       ) : (
@@ -89,14 +94,14 @@ export default function ContactPage() {
               {/* Google Map */}
               <div className="overflow-hidden border border-[#E8E8E8]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.392325898272!2d73.80061697519147!3d18.511164882580626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c78c00000001%3A0x5e2e479e2116eeee!2sANAND%20GARAGE!5e0!3m2!1sen!2sin!4v1780675593164!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=Hindu%20Gymkhana%2C%20Kothrud%2C%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="280"
                   style={{ border: 0, display: "block" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Anand Garage, Kothrud, Pune"
+                  title="Hindu Gymkhana, Kothrud, Pune"
                 />
               </div>
 
