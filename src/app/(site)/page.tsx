@@ -5,6 +5,7 @@ import AboutSnapshot from "@/components/home/AboutSnapshot";
 import CoachSection from "@/components/home/CoachSection";
 import PremiumSection from "@/components/home/PremiumSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import InstagramCarousel from "@/components/home/InstagramCarousel";
 import ServicesSection from "@/components/home/ServicesSection";
 import ProgramsSection from "@/components/home/ProgramsSection";
 import HowItWorks from "@/components/home/HowItWorks";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <AboutSnapshot />
       <CoachSection />
       <PremiumSection />
+      <InstagramCarousel />
       <WhyChooseUs />
       <ServicesSection />
       <ProgramsSection />
