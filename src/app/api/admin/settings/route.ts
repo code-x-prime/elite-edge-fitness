@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
 async function ensureAdmin() {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session?.user) return false;
   return true;
 }
@@ -43,3 +44,4 @@ export async function POST(req: NextRequest) {
   });
   return NextResponse.json({ success: true, enabled: settings.razorpayEnabled });
 }
+

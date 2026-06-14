@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 import { deleteFromR2 } from "@/lib/r2";
 
 async function guard() {
-  const s = await getServerSession();
+  const s = await getServerSession(authOptions);
   if (!s?.user) return false;
   const admin = await prisma.adminUser.findFirst({ where: { email: s.user.email! } });
   return !!admin;

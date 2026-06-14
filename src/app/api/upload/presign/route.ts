@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getPresignedUploadUrl, r2PublicUrl } from "@/lib/r2";
 import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 import crypto from "crypto";
 
 export async function POST(req: NextRequest) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session?.user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -23,3 +24,4 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json({ presignedUrl, publicUrl, key });
 }
+
