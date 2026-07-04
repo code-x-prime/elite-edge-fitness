@@ -110,7 +110,7 @@ export default function PaymentsPage() {
                 Choose from 4 convenient payment methods. After payment, send your screenshot via WhatsApp or email — we confirm within 2 hours.
               </p>
               <div className="flex items-center gap-3 text-sm font-body text-[#444]">
-                <IconShieldCheck size={18} className="text-green-500" stroke={2}/>
+                <IconShieldCheck size={18} className="text-green-500" stroke={2} />
                 <span>All payments are secure &amp; verified manually</span>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function PaymentsPage() {
                   {/* Card header */}
                   <div className="p-6 flex items-start gap-5 border-b border-[#F4F4F4]">
                     <div className={`w-14 h-14 ${m.iconBg} rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm border border-[#E8E8E8]`}>
-                      <m.Icon size={28} className={m.iconColor} stroke={1.5}/>
+                      <m.Icon size={28} className={m.iconColor} stroke={1.5} />
                     </div>
                     <div>
                       <h3 className="font-heading text-2xl uppercase text-[#0A0A0A] leading-tight">{m.name}</h3>
@@ -152,7 +152,7 @@ export default function PaymentsPage() {
                           <span className="text-xs font-body font-bold uppercase tracking-widest text-[#999] flex-shrink-0">{d.label}</span>
                           <div className="flex items-center gap-2 min-w-0">
                             <span className="font-mono text-sm font-bold text-[#0A0A0A] truncate">{d.value}</span>
-                            {d.copy && <CopyButton value={d.value}/>}
+                            {d.copy && <CopyButton value={d.value} />}
                           </div>
                         </div>
                       ))}
@@ -163,10 +163,10 @@ export default function PaymentsPage() {
                       <div className="flex flex-col items-center justify-center p-6 bg-[#F8F8F8] border border-[#E8E8E8] rounded-md">
                         <p className="text-[10px] font-body font-bold uppercase tracking-widest text-[#666] mb-3">Scan to Pay via UPI</p>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img 
-                          src={m.qrCode} 
-                          alt="UPI QR Code" 
-                          className="w-full max-w-[280px] h-auto shadow-md border border-[#E8E8E8] bg-white p-3 rounded hover:scale-[1.02] transition-transform duration-300" 
+                        <img
+                          src={m.qrCode}
+                          alt="UPI QR Code"
+                          className="w-full max-w-[280px] h-auto shadow-md border border-[#E8E8E8] bg-white p-3 rounded hover:scale-[1.02] transition-transform duration-300"
                         />
                       </div>
                     )}
@@ -197,7 +197,7 @@ export default function PaymentsPage() {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 w-full bg-[#003087] text-white text-xs font-bold uppercase tracking-widest py-4 hover:bg-[#0044C7] transition-colors font-body"
                     >
-                      {m.linkLabel} <IconArrowRight size={14} stroke={2}/>
+                      {m.linkLabel} <IconArrowRight size={14} stroke={2} />
                     </a>
                   )}
                 </div>
@@ -248,17 +248,17 @@ export default function PaymentsPage() {
                 className="flex items-center gap-4 bg-white border-2 border-[#E8E8E8] hover:border-[#25D366] hover:shadow-md p-5 transition-all group"
               >
                 <div className="w-12 h-12 bg-[#25D366] rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <IconBrandWhatsapp size={24} className="text-white" stroke={1.5}/>
+                  <IconBrandWhatsapp size={24} className="text-white" stroke={1.5} />
                 </div>
                 <div className="flex-1">
                   <p className="font-body font-bold text-sm text-[#0A0A0A]">WhatsApp</p>
                   <p className="text-xs text-[#666] font-body">+91 9665962938 · Fastest response</p>
                 </div>
-                <IconArrowRight size={16} className="text-[#CCC] group-hover:text-[#25D366] transition-colors"/>
+                <IconArrowRight size={16} className="text-[#CCC] group-hover:text-[#25D366] transition-colors" />
               </a>
 
               <a
-                href="mailto:eliteedgefitness09@gmail.com?subject=Payment%20Confirmation%20-%20Elite%20Edge%20Fitness"
+                href="mailto:support@eliteedgefitness.in?subject=Payment%20Confirmation%20-%20Elite%20Edge%20Fitness"
                 className="flex items-center gap-4 bg-white border-2 border-[#E8E8E8] hover:border-[#FF6B00] hover:shadow-md p-5 transition-all group"
               >
                 <div className="w-12 h-12 bg-[#FF6B00] rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -266,9 +266,9 @@ export default function PaymentsPage() {
                 </div>
                 <div className="flex-1">
                   <p className="font-body font-bold text-sm text-[#0A0A0A]">Email</p>
-                  <p className="text-xs text-[#666] font-body">eliteedgefitness09@gmail.com</p>
+                  <p className="text-xs text-[#666] font-body">support@eliteedgefitness.in</p>
                 </div>
-                <IconArrowRight size={16} className="text-[#CCC] group-hover:text-[#FF6B00] transition-colors"/>
+                <IconArrowRight size={16} className="text-[#CCC] group-hover:text-[#FF6B00] transition-colors" />
               </a>
             </div>
           </div>
@@ -288,7 +288,7 @@ export default function PaymentsPage() {
               href="/plans"
               className="flex-shrink-0 flex items-center gap-3 bg-[#FF6B00] text-white text-sm font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#E55A00] transition-colors font-body"
             >
-              Go to Plans <IconArrowRight size={16} stroke={2}/>
+              Go to Plans <IconArrowRight size={16} stroke={2} />
             </a>
           </div>
         </div>

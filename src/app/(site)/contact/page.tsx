@@ -15,14 +15,14 @@ export const metadata = {
 };
 
 const info = [
-  { 
-    Icon: IconMapPin, 
-    label: "Address", 
+  {
+    Icon: IconMapPin,
+    label: "Address",
     value: "Hindu Gymkhana, Kothrud Lane Number 7, Rajpath Society, Paramhans Nagar Lane No 7, Paud Road, Kothrud, Pune, Maharashtra 411038",
     href: "https://share.google/Ex3Pgh42Q3gVXb086"
   },
   { Icon: IconPhone, label: "Phone", value: "+91 9665962938", href: "tel:+919665962938" },
-  { Icon: IconMail, label: "Email", value: "eliteedgefitness09@gmail.com", href: "mailto:eliteedgefitness09@gmail.com" },
+  { Icon: IconMail, label: "Email", value: "support@eliteedgefitness.in", href: "mailto:support@eliteedgefitness.in" },
   { Icon: IconClock, label: "Hours", value: "MON–SAT: 6:00 AM – 10:00 PM (SUN OFF)" },
 ];
 

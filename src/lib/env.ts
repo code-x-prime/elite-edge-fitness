@@ -32,7 +32,7 @@ export const env = {
   // NextAuth
   nextauth: {
     secret: optional("NEXTAUTH_SECRET"),
-    url: optional("NEXTAUTH_URL", "http://localhost:3000"),
+    url: optional("NEXTAUTH_URL", "https://eliteedgefitness.in"),
   },
 
   // Razorpay
@@ -57,8 +57,8 @@ export const env = {
     smtpPort: parseInt(optional("SMTP_PORT", "587")),
     smtpUser: optional("SMTP_USER"),
     smtpPass: optional("SMTP_PASS"),
-    from: optional("EMAIL_FROM", "Elite Edge Fitness <eliteedgefitness09@gmail.com>"),
-    to: optional("EMAIL_TO", "eliteedgefitness09@gmail.com"),
+    from: optional("EMAIL_FROM", "Elite Edge Fitness <ginieelnvalkr@gmail.com>"),
+    to: optional("EMAIL_TO", "ginieelnvalkr@gmail.com"),
     enabled: !!(process.env.SMTP_USER && process.env.SMTP_PASS),
   },
 

@@ -126,8 +126,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <IconMail size={16} className="text-[#FF6B00] flex-shrink-0" />
-                <a href="mailto:eliteedgefitness09@gmail.com" className="text-sm text-[#999] hover:text-white transition-colors font-body">
-                  eliteedgefitness09@gmail.com
+                <a href="mailto:support@eliteedgefitness.in" className="text-sm text-[#999] hover:text-white transition-colors font-body">
+                  support@eliteedgefitness.in
                 </a>
               </li>
               <li className="flex items-center gap-3">

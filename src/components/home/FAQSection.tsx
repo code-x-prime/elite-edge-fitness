@@ -56,7 +56,7 @@ const FAQS_RIGHT = [
   {
     question: "How do I contact Ginieel - Founder (Elite Edge Fitness) directly?",
     answer:
-      "WhatsApp at +91 9665962938, email at eliteedgefitness09@gmail.com, or use the Contact page form. Response guaranteed within 24 hours — usually much faster.",
+      "WhatsApp at +91 9665962938, email at support@eliteedgefitness.in, or use the Contact page form. Response guaranteed within 24 hours — usually much faster.",
   },
   {
     question: "Can I switch or upgrade my plan mid-way?",

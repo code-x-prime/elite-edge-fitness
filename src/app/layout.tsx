@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, DM_Sans } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import FloatingMeetButton from "@/components/layout/FloatingMeetButton";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -38,6 +39,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <FloatingMeetButton />
       </body>
     </html>
   );
